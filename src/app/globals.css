@@ -1,33 +1,383 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F8F9FA; /* Light gray background */
+  color: #343A40; /* Dark gray text */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header {
+  background-color: #1D3557; /* Deep blue header background */
+  color: #F1FAEE; /* Light gray text color for header */
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 20%;
+}
+
+header ul li {
+  margin-right: 20px;
+}
+
+header ul li a, .auth-links a {
+  color: #F1FAEE; /* Light gray text */
+  text-decoration: none;
+}
+
+.auth-links a {
+  margin-left: 10px;
+}
+
+.hero {
+  background-color: #F8F9FA; /* Light gray background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.recent-projects {
+  padding: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-list article {
+  background-color: #FFF; /* White background for articles */
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #1D3557; /* Deep blue footer background */
+  color: #F1FAEE; /* Light gray text */
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.header_new {
+  background-color: orange;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #1D3557; /* Deep blue background */
+  color: #F1FAEE; /* Light gray text */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding-left: 40px;
+}
+
+.search i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.search span {
+  font-size: 16px;
+  color: #F1FAEE; /* Light gray text */
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #F1FAEE; /* Light gray text */
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  background-color: #E63946; /* Coral button background */
+  color: #F1FAEE; /* Light gray text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #D62839; /* Darker coral on hover */
+}
+
+.Greeting {
+  padding: 0;
+  text-align: center;
+  font-size: 48px;
+  margin: 0 0 38px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  color: #1D3557; /* Deep blue text */
+  margin-top: 35px;
+}
+
+.Intro {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3333;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #343A40; /* Dark gray text */
+  background-color: #F8F9FA; /* Light gray background */
+  word-break: break-word;
+  padding: 0;
+  font-size: 24px;
+  color: #1D3557; /* Deep blue text */
+  max-width: 800px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.member-button {
+  display: block; /* Ensures the button takes up full width */
+  width: 200px; /* Adjust width as per your design */
+  margin: 0 auto; /* Centers the button horizontally */
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #F1FAEE; /* Light gray text */
+  background-color: #E63946; /* Coral button background */
+  border-radius: 50px; /* Makes the button oval */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px; /* Adjust top margin for spacing */
+}
+
+.member-button:hover {
+  background-color: #D62839; /* Darker coral on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-grid .project_row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-grid .project-item {
+  background-color: #FFF; /* White background for articles */
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure child elements don't overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+
+.project-grid .project-item:hover {
+  transform: translateY(-10px); /* Move up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.project-grid .project-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition effects for image */
+}
+
+.project-grid .project-item img:hover {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  filter: brightness(0.8); /* Darken image slightly on hover */
+}
+
+.project-grid .project-item:nth-child(1) img:hover {
+  transform: scale(1.05); /* Rotate and zoom in on hover for first image */
+}
+
+.project-grid .project-item:nth-child(2) img:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover for second image */
+}
+
+.project-grid .project-item:nth-child(3) img:hover {
+  transform: translateX(10px) scale(1.1); /* Move right and zoom in on hover for third image */
+}
+
+.project-grid .project-item h3 {
+  margin-top: 10px;
+  color: #1D3557; /* Deep blue for article titles */
+}
+
+.project-grid .project-item p {
+  color: #343A40; /* Dark gray text */
+}
+
+.project-grid .project-item a {
+  color: #E63946; /* Coral color for read more links */
+}
+
+.tag-list a {
+  background-color: #1D3557; /* Deep blue background for tags */
+  color: #F1FAEE; /* Light gray text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.newsletter {
+  background-color: #1D3557; /* Deep blue background */
+  color: #F1FAEE; /* Light gray text */
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  background-color: #E63946; /* Coral button background */
+  color: #F1FAEE; /* Light gray text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #D62839; /* Darker coral on hover */
+}
+
+footer {
+  background-color: #1D3557; /* Deep blue background */
+  color: #F1FAEE; /* Light gray text */
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #F1FAEE; /* Light gray text */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.to-top {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E63946; /* Coral button background */
+  color: #F1FAEE; /* Light gray text */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.to-top:hover {
+  background-color: #D62839; /* Darker coral on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  text-align: center; /* Center-align text */
+  font-family: 'Arial', sans-serif; /* Desired font family */
+  font-size: 32px; /* Adjust font size as per your design */
+  color: #1D3557; /* Deep blue text color */
+  margin-top: 40px; /* Adjust top margin for spacing */
+  margin-bottom: 20px; /* Adjust bottom margin for spacing */
+}
+
+.title {
+  text-align: center;
+  padding-left: 60px;
+}
+
+/* Popular Tags Section */
+.tags {
+  background-color: #F1FAEE; /* Light gray background for tags section */
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #E63946; /* Vivid red border at the top */
+  border-bottom: 2px solid #E63946; /* Vivid red border at the bottom */
+}
+
+.tags h2 {
+  color: #1D3557; /* Deep blue for tags section title */
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tag-item {
+  text-align: center;
+  margin: 10px; /* Added margin for better spacing */
+}
+
+.tag-item img {
+  width: 230px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 10px; /* Optional: Add a slight border radius */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition effects for image */
+}
+
+.tag-item img:hover {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  filter: brightness(0.8); /* Darken image slightly on hover */
+}
+
+.tag-item a {
+  display: block;
+  margin-top: 10px;
+  color: #E63946; /* Coral text for tag names */
+  text-decoration: none;
+  font-weight: bold;
 }
