@@ -7,7 +7,7 @@ const MainContent = () => {
   return (
     <main>
       <section className="intro">
-        <p className="Greeting">Greetings! We're Wanderlust, delving into travel,<br /> adventures, and exploration.</p>
+        <p className="Greeting">Greetings! We're SnapNest, delving into travel,<br /> adventures, and exploration.</p>
         <p className="Intro">Introducing a contemporary and polished template for showcasing your travel experiences. Ideal for presenting your trips, stories, and explorations in a professional and captivating manner...</p>
         <a href="#" className="member-button">BECOME A MEMBER</a>
       </section>
@@ -59,7 +59,7 @@ const MainContent = () => {
         <h2>Stay in the Loop</h2>
         <p>Get the latest travel stories delivered right to your email.</p>
         <form>
-          <input type="email" placeholder="wanderlust@example.com" />
+          <input type="email" placeholder="SnapNest@example.com" />
           <button type="submit">SUBSCRIBE</button>
         </form>
       </section>

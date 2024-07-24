@@ -11,7 +11,7 @@ const Header = () => {
           <span>Search</span>
         </div>
         <div className="title">
-          <h1>Wanderlust HUB</h1>
+          <h1>SnapNest</h1>
         </div>
         <div className="actions">
           <button>Sign In</button>

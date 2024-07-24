@@ -15,7 +15,7 @@ const Footer = () => {
         <a href="#">Terms of Use</a>
         <a href="#">Membership</a>
       </div>
-      <p>© 2024 Wanderlust. All rights reserved</p>
+      <p> 2024 SnapNest_Raj. All rights reserved</p>
     </footer>
   );
 }
